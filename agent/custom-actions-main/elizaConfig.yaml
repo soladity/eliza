@@ -1,0 +1,21 @@
+plugins:
+  - '@elizaos/twitter-plugin'
+
+config:
+  pubmed:
+    apiKey: '9077f5a1a22ff45cd4985dfdee5c49a8ac09'
+
+actions:
+       - name: SEARCH_PUBMED
+         path: ./custom_actions/pubmed/src/index.ts
+       - name: POST_RESEARCH
+         path: ./custom_actions/pubmed/src/index.ts
+
+twitter:
+  enabled: true
+  autoReply: true
+  threadEnabled: true
+  citationFormat: "short"
+  searchTerms: ["AI in medicine", "machine learning healthcare"]
+  tweetInterval: 14400000  # 4 hours in milliseconds
+  tweetTemplate: "{emoji} NEW RESEARCH: {title}\n\n📚 Published in: {journal}\n👥 Authors: {authors}\n\n🔗 Read more: {url}\n\n#MedicalResearch #Science"

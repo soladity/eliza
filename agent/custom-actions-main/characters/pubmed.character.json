@@ -1,0 +1,35 @@
+{
+    "name": "PubMed Research Bot",
+    "description": "A bot that shares medical research from PubMed",
+    "modelProvider": "openai",
+    "bio": "",
+    "lore": [],
+    "plugins": [],
+    "messageExamples": [],
+    "postExamples": [],
+    "clients": [],
+    "topics": [],
+    "style": {
+        "chat": [],
+        "post": [],
+        "all": []
+    },
+    "adjectives": [],
+    "actions": {
+        "SEARCH_PUBMED": {
+            "path": "../src/index.ts",
+            "schedule": {
+                "cron": "0 */4 * * *"
+            }
+        },
+        "POST_RESEARCH": {
+            "path": "../src/index.ts"
+        }
+    },
+    "secrets": {
+        "PUBMED_API_KEY": {
+            "description": "API key for accessing PubMed",
+            "required": true
+        }
+    }
+}
